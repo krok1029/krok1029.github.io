@@ -37,7 +37,7 @@
   background-image: url(./images/p01.jpg);
 }
 .p02 {
-  background-image: url(./images/p02.jpg);
+  background-image: url(./images/p05.jpg);
 }
 .p03 {
   background-image: url(./images/p03.jpg);
@@ -46,7 +46,7 @@
   background-image: url(./images/p04.jpg);
 }
 .p05 {
-  background-image: url(./images/p05.jpg);
+  background-image: url(./images/p02.jpg);
 }
 
 .page1_l {
@@ -145,13 +145,14 @@
   background-color: #ffffff81;
   padding: 10px;
   overflow: auto;
-  scrollbar-width: 0%;
 }
-
+.page2_bg .link_contant::-webkit-scrollbar {
+  width: 0%;
+}
 .page2_bg .link_contant .p2_card {
   margin: 5px;
   width: 300px;
-  height: 200px;
+  min-height: 200px;
   background-size: cover;
   /* background-color: rgba(12, 190, 190, 0.425); */
   display: flex;
@@ -173,6 +174,8 @@
 }
 .p2_card img {
   width: 100%;
+  max-height: 170px;
+  object-fit: cover;
   margin-bottom: 3px;
   border-radius: 10px;
 }
