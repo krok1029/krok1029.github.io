@@ -11,6 +11,7 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
@@ -34,7 +35,7 @@
           );
           $(".nav li").css("background-color", "white");
           $(".nav li:eq(" + nowpage + ")").css("background-color", "#46dd46");
-          console.log("nowpage:" + nowpage);
+          // console.log("nowpage:" + nowpage);
         });
 
         //調整導覽列高度
@@ -52,6 +53,25 @@
   </head>
 
   <body>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <a href="#">Lee's Design</a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="#" data-set="1000">About</a></li>
+          <li><a href="#page2">Skill</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
     <div class="nav">
       <ul>
         <li></li>
@@ -66,28 +86,28 @@
         <div class="page1_l">
           <div class="pic_mycat"></div>
           <h2>李 明峯</h2>
-          <h3>Gandalf, LEE</h3>
+          <h3>Ming Feng, LEE</h3>
         </div>
         <div class="page1_r flex">
           <div class="box_p1">
             <h3>經歷</h3>
 
-            <p>
+            <div>
               成大工程科學系 畢業 <br />
               廣運機械系統開發部 工程師 <br />
               資策會前端工程師養成班
-            </p>
+            </div>
           </div>
           <div class="box_p1">
             <h3>專長</h3>
-            <p>
-              C#,Python,Java,MS SQL, PL/SQL,HTML5,CSS,JavaScript,
-              Node.js,React.js,Redux,C++,ROS
-            </p>
+            <div>
+              C#, Python, Java, MS SQL, PL/SQL, HTML5, CSS, JavaScript, Node.js,
+              React.js, Redux, C++, ROS
+            </div>
           </div>
           <div class="box_p1">
             <h3>興趣</h3>
-            <p>電玩,漫畫,組裝模型</p>
+            <div>電玩,漫畫,組裝模型</div>
           </div>
           <!-- <div class="box_p1">
             <h3>成為好友</h3>
@@ -97,7 +117,7 @@
           </div> -->
         </div>
       </div>
-      <div class="p02 flex pic_b" memo="Portfolio">
+      <div class="p02 flex pic_b" memo="Portfolio" id="page2">
         <div class="page2_bg d-flex flex-column">
           <div class="title1">
             <h3>Portfloio</h3>
@@ -190,4 +210,35 @@
       <div class="p05 pic_b"></div> -->
     </div>
   </body>
+  <script>
+    document.querySelector(".menu-list>li>a").addEventListener("click", (e) => {
+      console.log(e.target.getAttribute("data-set"));
+      const offset = e.target.getAttribute("data-set");
+      window.scroll({
+        top: offset,
+        behavior: "smooth", // 👈
+      });
+    });
+  </script>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = () => {
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    };
+    cancelBtn.onclick = () => {
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    };
+    window.onscroll = () => {
+      this.scrollY < 20
+        ? navbar.classList.add("sticky")
+        : navbar.classList.remove("sticky");
+    };
+  </script>
 </html>
