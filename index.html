@@ -53,7 +53,7 @@
   </head>
 
   <body>
-    <nav class="navbar">
+    <nav class="navbar sticky">
       <div class="content">
         <div class="logo">
           <a href="#">Lee's Design</a>
@@ -62,10 +62,10 @@
           <div class="icon cancel-btn">
             <i class="fas fa-times"></i>
           </div>
-          <li><a href="#" data-set="1000">About</a></li>
-          <li><a href="#page2">Skill</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" data-set="0">About</a></li>
+          <li><a href="#" data-set="1">Skill</a></li>
+          <li><a href="#" data-set="2">Work</a></li>
+          <li><a href="#" data-set="3">Contact</a></li>
         </ul>
         <div class="icon menu-btn">
           <i class="fas fa-bars"></i>
@@ -211,16 +211,6 @@
     </div>
   </body>
   <script>
-    document.querySelector(".menu-list>li>a").addEventListener("click", (e) => {
-      console.log(e.target.getAttribute("data-set"));
-      const offset = e.target.getAttribute("data-set");
-      window.scroll({
-        top: offset,
-        behavior: "smooth", // 👈
-      });
-    });
-  </script>
-  <script>
     const body = document.querySelector("body");
     const navbar = document.querySelector(".navbar");
     const menuBtn = document.querySelector(".menu-btn");
@@ -240,5 +230,18 @@
         ? navbar.classList.add("sticky")
         : navbar.classList.remove("sticky");
     };
+    document.querySelectorAll(".menu-list>li>a").forEach((ele) => {
+      ele.addEventListener("click", (e) => {
+        const p1 = document.querySelector(".p01");
+        const offset = e.target.getAttribute("data-set");
+        window.scrollBy({
+          top: (p1.offsetHeight + 20) * offset,
+          behavior: "smooth",
+        });
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      });
+    });
   </script>
 </html>
