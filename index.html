@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>introduce</title>
+    <title>Hello</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link
       rel="stylesheet"
@@ -25,10 +25,10 @@
           <div class="icon cancel-btn">
             <i class="fas fa-times"></i>
           </div>
-          <li><a href="#" data-set="0">About</a></li>
-          <li><a href="#" data-set="1">Skill</a></li>
-          <li><a href="#" data-set="2">Work</a></li>
-          <li><a href="#" data-set="3">Contact</a></li>
+          <li><a href="#" data-set="1">About</a></li>
+          <li><a href="#" data-set="2">Skill</a></li>
+          <li><a href="#" data-set="3">Work</a></li>
+          <li><a href="#" data-set="4">Contact</a></li>
         </ul>
         <div class="icon menu-btn">
           <i class="fas fa-bars"></i>
@@ -37,43 +37,195 @@
     </nav>
 
     <div class="">
-      <div class="p01 flex pic_b" memo="mainInfo">
-        <div class="page1_l">
-          <div class="pic_mycat"></div>
-          <h2>李 明峯</h2>
-          <h3>Ming Feng, LEE</h3>
-        </div>
-        <div class="page1_r flex">
-          <div class="box_p1">
-            <h3>經歷</h3>
-
-            <div>
-              成大工程科學系 畢業 <br />
-              廣運機械系統開發部 工程師 <br />
-              資策會前端工程師養成班
+      <div class="p01 pic_b" memo="mainInfo">
+        <div class="mainpage_bg">
+          <div class="maintitle" id="page5">
+            <div class="maintitlecontent">
+              <h1>Lee</h1>
+              <h1>portfolio</h1>
+              <hr />
+              <p>Welcome To My Website</p>
+              <p>Experience | Skills | Works</p>
             </div>
           </div>
-          <div class="box_p1">
-            <h3>專長</h3>
-            <div>
-              C#, Python, Java, MS SQL, PL/SQL, HTML5, CSS, JavaScript, Node.js,
-              React.js, Redux, C++, ROS
-            </div>
-          </div>
-          <div class="box_p1">
-            <h3>興趣</h3>
-            <div>電玩,漫畫,組裝模型</div>
-          </div>
-          <!-- <div class="box_p1">
-            <h3>成為好友</h3>
-            <div class="flex">
-              <img src="./images/LINE_P20200804_182042256.jpg" alt="" />
-            </div>
-          </div> -->
         </div>
       </div>
-      <div class="p03 pic_b">
-        <div class="box_working"><h1>持續更新中！</h1></div>
+      <div class="p04 pic_b">
+        <div class="box_working d-flex flex-column">
+          <h1>持續更新中！</h1>
+          <br />
+          <div class="about">
+            Hi!
+            我是明峯，目前正努力朝網頁前端工程師邁進，比較擅長的技術有HTML/CSS/JS、Node.js、C#、SQL，在過去使用vistual
+            studio 撰寫 .net framework 及 ASP.NET MVC 的相關專案 2 年的經驗。
+            接觸ASP.NET MVC
+            後，我認為網頁工程師的未來有無限的可能，因此秉持著熱愛前端的心及對未來科技的好奇，參加資策會的前端工程師養成班，增進自己對於網頁程式設計的認識與熟練。
+          </div>
+        </div>
+      </div>
+      <div class="p03 pic_b d-flex justify-content-center align-items-center">
+        <div class="skill">
+          <div class="topic title1">SKILLS</div>
+          <div class="d-flex flex-column n_overflow-scroll px-4 h-75">
+            <div class="d-flex flex-row justify-content-between" title="">
+              <!-- <div>前端語言</div> -->
+              <div class="d-flex flex-column">
+                <h4>HTML / CSS</h4>
+
+                <ul>
+                  <li>HTML5 &amp; CSS3</li>
+                  <li>CSS framework - Bootstrap</li>
+                  <li>template engine - &nbsp;ejs</li>
+                  <li>CSS preprocessor - SCSS</li>
+                  <li>RWD 切版</li>
+                </ul>
+
+                <p>
+                  <br />
+                </p>
+
+                <p>
+                  <br />
+                </p>
+              </div>
+              <div class="d-flex flex-column">
+                <h4>JavaScript</h4>
+                <ul>
+                  <li>JavaScript ES5 / ES6</li>
+                  <li>jQuery /&nbsp;jQuery UI</li>
+                  <li>React &amp; Redux</li>
+                  <li>React Hook</li>
+                  <li>React Router</li>
+                  <li>XHR / AJAX / Fetch</li>
+                  <li>Closure 閉包</li>
+                  <li>callback / Promise / Async</li>
+                </ul>
+
+                <p>
+                  <br />
+                </p>
+              </div>
+              <div class="d-flex flex-column">
+                <h4>Node.js</h4>
+
+                <ul>
+                  <li>express</li>
+                  <li>fs / read &amp; write files</li>
+                  <li>Middleware</li>
+                  <li>Router</li>
+                  <li>WebSocket / socket.io</li>
+                  <li>MySQL CRUD</li>
+                  <li>CORS</li>
+                  <li>爬蟲 (selenium-webdriver)</li>
+                  <li>臉書聊天機器人 (Chatbot)</li>
+                </ul>
+
+                <p>
+                  <br />
+                </p>
+
+                <p>
+                  <br />
+                </p>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-between" title="">
+              <div class="d-flex flex-column">
+                <h4>PHP</h4>
+
+                <ul>
+                  <li>MySQL CRUD</li>
+                  <li>建立通訊錄</li>
+                  <li>建立購物車系統</li>
+                  <li>建立後台資料庫管理</li>
+                </ul>
+
+                <p>
+                  <br />
+                </p>
+              </div>
+              <div class="d-flex flex-column">
+                <h4>Ｃ＃</h4>
+
+                <ul>
+                  <li>ASP .NET framework</li>
+                  <li>ASP .NET MVC</li>
+                  <li>MS SQL connect</li>
+                  <li>Oracle connect</li>
+                </ul>
+
+                <p>
+                  <br />
+                </p>
+
+                <p>
+                  <br />
+                </p>
+              </div>
+              <div class="d-flex flex-column">
+                <h4>SQL</h4>
+                <div>
+                  <ul>
+                    <li>MS SQL</li>
+                    <li>SQL procedure</li>
+                    <li>MySQL</li>
+                    <li>Oracle</li>
+                    <li>SQLite</li>
+                  </ul>
+                </div>
+
+                <p>
+                  <br />
+                </p>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-between" title="">
+              <div class="d-flex flex-column">
+                <h4>Python</h4>
+
+                <ul>
+                  <li>pip module 套用</li>
+                  <li>mySql connect</li>
+                  <li>SQLite connect</li>
+                  <li>Django (learning)</li>
+                </ul>
+
+                <p>
+                  <br />
+                </p>
+              </div>
+              <div class="d-flex flex-column">
+                <h4>Others</h4>
+
+                <div>
+                  <ul>
+                    <li>NPM, yarn 指令</li>
+                    <li>Git / Github 指令</li>
+                    <li>Babel 自動打包編譯</li>
+                    <li>Postman 測試 API</li>
+                    <li>JSON Server 模擬 restful API</li>
+                    <li>閱讀官方API文件、查詢 stackoverflow</li>
+                    <li>使用Markdown語法撰寫Readme.md</li>
+                    <li>Ubuntu OS&nbsp;</li>
+                  </ul>
+                </div>
+
+                <p>
+                  <br />
+                </p>
+              </div>
+              <div class="d-flex flex-column">
+                <h1>
+                  <br />
+                </h1>
+
+                <p>
+                  <br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="p02 flex pic_b" memo="Portfolio" id="page2">
         <div class="page2_bg d-flex flex-column">
@@ -161,8 +313,42 @@
           </div>
         </div>
       </div>
-      <!-- <div class="p04 pic_b"></div>
-      <div class="p05 pic_b"></div> -->
+
+      <div class="p05 pic_b flex">
+        <div class="page1_l">
+          <div class="pic_mycat"></div>
+          <h2>李 明峯</h2>
+          <h3>Ming Feng, LEE</h3>
+        </div>
+        <div class="page1_r flex">
+          <div class="box_p1">
+            <h3>經歷</h3>
+
+            <p>
+              成大工程科學系 畢業 <br />
+              廣運機械系統開發部 工程師 <br />
+              資策會前端工程師養成班
+            </p>
+          </div>
+          <div class="box_p1">
+            <h3>專長</h3>
+            <p>
+              C#, Python, Java, MS SQL, PL/SQL, HTML5, CSS, JavaScript, Node.js,
+              React.js, Redux, C++
+            </p>
+          </div>
+          <div class="box_p1">
+            <h3>興趣</h3>
+            <p>電玩,漫畫,組裝模型</p>
+          </div>
+          <!-- <div class="box_p1">
+          <h3>成為好友</h3>
+          <div class="flex">
+            <img src="./images/LINE_P20200804_182042256.jpg" alt="" />
+          </div>
+        </div> -->
+        </div>
+      </div>
     </div>
   </body>
   <script>
@@ -189,9 +375,9 @@
       ele.addEventListener("click", (e) => {
         const p1 = document.querySelector(".p01");
         const offset = e.target.getAttribute("data-set");
-        // console.log((p1.offsetHeight + 20) * offset - window.pageYOffset);
+        // console.log(p1.offsetHeight  * offset +20);
         window.scrollBy({
-          top: (p1.offsetHeight + 20) * offset - window.pageYOffset,
+          top: p1.offsetHeight * offset + 20,
           behavior: "smooth",
         });
         body.classList.remove("disabled");
